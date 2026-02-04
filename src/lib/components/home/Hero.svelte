@@ -1,5 +1,5 @@
 <script>
-    import BtnWhatsapp from "./buttons/BtnWhatsapp.svelte";
+    import BtnWhatsapp from "../buttons/BtnWhatsapp.svelte";
     import { Headset, ShieldCheck } from "lucide-svelte";
     import {MapPin} from "lucide-svelte";
     import {CalendarSearch} from "lucide-svelte";
