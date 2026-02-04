@@ -16,7 +16,7 @@ export const cars: Car[] = [
 	{
 		id: 'g63',
 		slug: 'mercedes-g63-amg',
-		brand: 'Mercedes-Benz',
+		brand: 'Mercedes',
 		model: 'Classe G63 AMG',
 		year: 2020,
 		transmission: 'auto',
@@ -30,7 +30,7 @@ export const cars: Car[] = [
 	{
 		id: 'classe-a-2025',
 		slug: 'mercedes-classe-a-2025',
-		brand: 'Mercedes-Benz',
+		brand: 'Mercedes',
 		model: 'Classe A',
 		year: 2025,
 		transmission: 'auto',
@@ -179,5 +179,32 @@ export const cars: Car[] = [
 		image: '/cars/clio5-alpine-gris/avg.webp',
 		description:
 			'Renault Clio 5 Alpine gris, design racé et confort moderne pour une conduite dynamique.'
-	}
+	},
+    {
+		id: 'lamborghini-urus',
+		slug: 'lamborghini-urus',
+		brand: 'Lamborghini',
+		model: 'Urus',
+		year: 2024,
+		transmission: 'auto',
+		fuel: 'petrol',
+		color: 'Black',
+		image: '/cars/lamborghini-urus/avg.webp',
+		description:
+			" etc etc pas oublier d'ajouter la description"
+	},
+    {
+		id: 'audi-rs3',
+		slug: 'audi-rs3',
+		brand: 'Audi',
+		model: 'Audi-rs3',
+		year: 2024,
+		transmission: 'auto',
+		fuel: 'petrol',
+		color: 'Black',
+		image: '/cars/audi-rs3/avg.webp',
+		description:
+			"Audi Rs3 2024 etc etc pas oublier d'ajouter la description"
+	},
+
 ]

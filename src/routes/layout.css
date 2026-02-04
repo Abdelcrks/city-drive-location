@@ -4,3 +4,12 @@
    --font-sans : "Montserrat", ui-sans-serif, system-ui, -apple-system;
 }
 
+
+@keyframes CarouselLogoKeyFrames {
+    from {
+        transform : translateX(0);
+    }
+    to {
+        transform : translateX(-50%);
+    }
+}
