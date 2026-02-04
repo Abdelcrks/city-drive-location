@@ -1,7 +1,11 @@
 <script lang="ts">
 	import './layout.css';
-	let { children } = $props();
 	import logo from '$lib/assets/logo-city-drive.jpeg'
+    import BtnWhatsapp from '$lib/components/buttons/BtnWhatsapp.svelte';
+    import BtnSnapchat from '$lib/components/buttons/BtnSnapchat.svelte';
+
+	let { children } = $props();
+	
 
 	let mobileOpen = $state(false)
 
@@ -9,8 +13,7 @@
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-		rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </svelte:head>
 
 
@@ -38,15 +41,7 @@
 					<a href="/contacts" class="px-3 py-2 text-sm rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition">
 						Nous contacter
 					</a>
-	
-					<a
-						href="https://wa.me/33627524339?text=Salut%20City%20Drive%20!%20Je%20souhaite%20r%C3%A9server%20une%20voiture."
-						target="_blank"
-						rel="noreferrer"
-						class="ml-2 inline-flex items-center justify-center rounded-xl bg-green-500 text-white px-4 py-2 text-sm font-semibold hover:bg-green-600 transition"
-					>
-						Réserver (WhatsApp)
-					</a>
+					<BtnWhatsapp></BtnWhatsapp>
 				</div>
 	
 				<!-- Mobile menu hamburger -->
@@ -138,23 +133,8 @@
 			<div class="space-y-3">
 				<p class="text-sm font-semibold text-white/90">Réserver</p>
 				<div class="flex flex-col gap-3 ">
-					<a
-						class="inline-flex items-center justify-center rounded-xl bg-green-500 text-white px-4 py-2 w-1/2 text-sm font-semibold hover:bg-green-800 transition"
-						href="https://wa.me/33600000000?text=Salut%20City%20Drive%20!%20Je%20souhaite%20r%C3%A9server%20une%20voiture."
-						target="_blank"
-						rel="noreferrer"
-					>
-						WhatsApp
-					</a>
-
-					<a
-						class="inline-flex items-center justify-center rounded-xl bg-amber-400 text-white px-4 py-2  w-1/2 text-sm font-semibold ring-1 ring-white/15 hover:bg-amber-600 transition"
-						href="https://www.snapchat.com/@city.drivee"
-						target="_blank"
-						rel="noreferrer"
-					>
-						Snapchat
-					</a>
+					<BtnWhatsapp></BtnWhatsapp>
+					<BtnSnapchat></BtnSnapchat>
 				</div>
 			</div>
 		</div>
