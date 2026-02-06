@@ -2,6 +2,7 @@ export type Car = {
 	id: string;
 	slug: string;
 	brand: string;
+    category: string,
 	model: string;
 	year: number;
 	pricePerDay?: number; 
@@ -18,6 +19,7 @@ export const cars: Car[] = [
 		slug: 'mercedes-g63-amg',
 		brand: 'Mercedes',
 		model: 'Classe G63 AMG',
+        category: 'sport',
 		year: 2020,
 		transmission: 'auto',
 		fuel: 'petrol',
@@ -31,6 +33,7 @@ export const cars: Car[] = [
 		id: 'classe-a-2025',
 		slug: 'mercedes-classe-a-2025',
 		brand: 'Mercedes',
+        category: 'premium',
 		model: 'Classe A',
 		year: 2025,
 		transmission: 'auto',
@@ -45,6 +48,7 @@ export const cars: Car[] = [
 		id: 'bmw-serie-1',
 		slug: 'bmw-serie-1-m-sport-pro',
 		brand: 'BMW',
+        category: 'premium',
 		model: 'Série 1 M Sport Pro',
 		year: 2025,
 		transmission: 'auto',
@@ -59,6 +63,7 @@ export const cars: Car[] = [
 		id: 'polo-6',
 		slug: 'volkswagen-polo-6-r-line',
 		brand: 'Volkswagen',
+        category: 'citadine',
 		model: 'Polo 6 R-Line',
 		year: 2024,
 		transmission: 'auto',
@@ -73,6 +78,7 @@ export const cars: Car[] = [
 		id: 'peugeot-208',
 		slug: 'peugeot-208-gt',
 		brand: 'Peugeot',
+        category: 'premium',
 		model: '208 GT',
 		year: 2022,
 		transmission: 'auto',
@@ -88,6 +94,7 @@ export const cars: Car[] = [
 		slug: 'renault-clio-5-hybrid',
 		brand: 'Renault',
 		model: 'Clio 5 Hybrid',
+        category: 'citadine',
 		year: 2020,
 		transmission: 'auto',
 		fuel: 'hybrid',
@@ -102,6 +109,7 @@ export const cars: Car[] = [
 		slug: 'renault-clio-5-bleu-nuit',
 		brand: 'Renault',
 		model: 'Clio 5',
+        category: 'citadine',
 		year: 2019,
 		transmission: 'manual',
 		fuel: 'petrol',
@@ -116,6 +124,7 @@ export const cars: Car[] = [
 		slug: 'toyota-yaris-cross',
 		brand: 'Toyota',
 		model: 'Yaris Cross',
+        category: 'citadine',
 		year: 2025,
 		transmission: 'auto',
 		fuel: 'hybrid',
@@ -130,6 +139,7 @@ export const cars: Car[] = [
 		slug: 'audi-rs6',
 		brand: 'Audi',
 		model: 'RS6',
+        category: 'sport',
 		year: 2022,
 		transmission: 'auto',
 		fuel: 'petrol',
@@ -144,6 +154,7 @@ export const cars: Car[] = [
 		slug: 'audi-rs3',
 		brand: 'Audi',
 		model: 'RS3',
+        category: 'sport',
 		year: 2024,
 		transmission: 'auto',
 		fuel: 'petrol',
@@ -160,6 +171,7 @@ export const cars: Car[] = [
 		model: 'Clio 5 Alpine',
 		year: 2024,
 		transmission: 'auto',
+        category: 'citadine',
 		fuel: 'petrol',
 		color: 'Bleu Alpine',
 		image: '/cars/clio5-alpine-bleu/avg.webp',
@@ -174,6 +186,7 @@ export const cars: Car[] = [
 		model: 'Clio 5 Alpine',
 		year: 2024,
 		transmission: 'auto',
+        category: 'citadine',
 		fuel: 'petrol',
 		color: 'Gris',
 		image: '/cars/clio5-alpine-gris/avg.webp',
@@ -187,24 +200,11 @@ export const cars: Car[] = [
 		model: 'Urus',
 		year: 2024,
 		transmission: 'auto',
+        category: 'sport',
 		fuel: 'petrol',
 		color: 'Black',
 		image: '/cars/lamborghini-urus/avg.webp',
 		description:
 			" etc etc pas oublier d'ajouter la description"
 	},
-    {
-		id: 'audi-rs3',
-		slug: 'audi-rs3',
-		brand: 'Audi',
-		model: 'Audi-rs3',
-		year: 2024,
-		transmission: 'auto',
-		fuel: 'petrol',
-		color: 'Black',
-		image: '/cars/audi-rs3/avg.webp',
-		description:
-			"Audi Rs3 2024 etc etc pas oublier d'ajouter la description"
-	},
-
 ]
