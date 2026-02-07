@@ -22,7 +22,7 @@
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {#each filteredCars as car}
                 <article class="group relative overflow-hidden rounded-2xl  border border-zinc-800 bg-zinc-950 shadow-sm transition hover:shadow-white hover:border-zinc-700">
-                    <a href={`cars/${car.id}`} aria-label={`voir ${car.model}`} class="absolute inset-0 z-10"></a>
+                    <a href={`cars/${car.slug}`} aria-label={`voir ${car.model}`} class="absolute inset-0 z-10"></a>
 
                     <div class="relative z-0">
                         <div class="relative h-48 w-full overflow-hidden">
