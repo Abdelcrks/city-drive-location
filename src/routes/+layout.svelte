@@ -84,28 +84,13 @@
 					</a>
 	
 					<div class="mt-3 grid gap-2">
-						<a
-							class="inline-flex items-center justify-center rounded-xl bg-green-500 text-white px-4 py-2 text-sm font-semibold hover:bg-green-600 transition"
-							href="https://wa.me/33627524339?text=Salut%20City%20Drive%20!%20Je%20souhaite%20r%C3%A9server%20une%20voiture."
-							target="_blank"
-							rel="noreferrer"
-						>
-							Réserver (WhatsApp)
-						</a>
-						<a
-							class="inline-flex items-center justify-center rounded-xl bg-amber-400 text-zinc-950 px-4 py-2 text-sm font-semibold hover:bg-amber-300 transition"
-							href="https://www.snapchat.com/@city.drivee"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Snapchat
-						</a>
+						<BtnWhatsapp></BtnWhatsapp>
+						<BtnSnapchat></BtnSnapchat>
 					</div>
 				</div>
 			{/if}
 		</div>
 	</nav>
-	
 
 	<main class="flex-1">
 		{@render children()}

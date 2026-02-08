@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { page } from '$app/stores';
     import { cars } from '$lib/data/cars'; 
   
@@ -6,9 +6,18 @@
     // donc $: en qq sorte un useeffect, sauf que je le définis , donc si l'url change la category est recalculé sport = vehicule sport, premium = vehicule premium etc
     console.log(category)
   
-    $: filteredCars = category
-      ? cars.filter((c) => c.category === category)
-      : cars
+    // $: filteredCars = category
+    //   ? cars.filter((c) => c.category === category)
+    //   : cars
+
+
+    $: brand = $page.url.searchParams.get("brand")
+
+    $: filteredCars = cars.filter((c) => { const matchCategory = category ? c.category === category : true
+        const matchBrand = brand ? c.brand.toLocaleLowerCase() === brand.toLocaleLowerCase() : true
+        return matchCategory && matchBrand
+    })
+    
   </script>
   
   {#if filteredCars.length === 0}
@@ -17,16 +26,25 @@
 
     <section class="mx-auto max-w-6xl px-4 py-10">
 
-        <h1 class="text-2xl font-light pb-10">Tout nos véhicules :</h1>
-
+        <h1 class="text-2xl font-light pb-10">
+            {#if brand && category}
+                {brand.toLocaleUpperCase()} - {category.toLocaleUpperCase()}
+            {:else if brand}
+                {brand.toLocaleUpperCase()}
+            {:else if category?.toLocaleUpperCase()}
+                {category}
+            {:else}
+                Tout les véhicules
+            {/if}
+        </h1>
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {#each filteredCars as car}
                 <article class="group relative overflow-hidden rounded-2xl  border border-zinc-800 bg-zinc-950 shadow-sm transition hover:shadow-white hover:border-zinc-700">
                     <a href={`cars/${car.slug}`} aria-label={`voir ${car.model}`} class="absolute inset-0 z-10"></a>
 
                     <div class="relative z-0">
-                        <div class="relative h-48 w-full overflow-hidden">
-                            <img src={car.image} alt={car.model} class="h-full w-full object-cover transition duration-300 group-hover:scale-110"/>
+                        <div class="relative aspect-16/10 w-full overflow-hidden">
+                            <img src={car.image} alt={car.model} class="absolute inset-0 h-full w-full object-[0%_75%] object-cover transition duration-300 group-hover:scale-110"/>
                             <div class="absolute inset-0 bg-linear-to-t from-zinc-950/80 via-zinc-950/20 to-transparent"></div>
                             <span class="absolute top-3 left-3 rounded-full bg-zinc-900/80 px-3 py-1 text-xs font-medium text-zinc-100 backdrop-blur"
                             >{car.category}
