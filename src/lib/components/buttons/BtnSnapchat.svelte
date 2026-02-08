@@ -4,5 +4,5 @@ href="https://www.snapchat.com/@city.drivee"
 target="_blank"
 rel="noreferrer"
 >
-Snapchat
+Reserver sur Snapchat
 </a>
