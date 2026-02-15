@@ -3,6 +3,8 @@
 	import logo from '$lib/assets/logo-city-drive.jpeg'
     import BtnWhatsapp from '$lib/components/buttons/BtnWhatsapp.svelte';
     import BtnSnapchat from '$lib/components/buttons/BtnSnapchat.svelte';
+	import BtnTiktok from '$lib/components/buttons/BtnTiktok.svelte';
+  import BtnInstagram from '$lib/components/buttons/BtnInstagram.svelte';
 
 	let { children } = $props();
 	
@@ -39,9 +41,11 @@
 						Nos véhicules
 					</a>
 					<a href="/contacts" class="px-3 py-2 text-sm rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition">
-						Nous contacter
+						À propos
 					</a>
 					<BtnWhatsapp></BtnWhatsapp>
+					<BtnSnapchat></BtnSnapchat>
+
 				</div>
 	
 				<!-- Mobile menu hamburger -->
@@ -80,7 +84,7 @@
 						onclick={() => mobileOpen = false}
 						class="block px-3 py-2 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition"
 					>
-						Nous contacter
+						À propos
 					</a>
 	
 					<div class="mt-3 grid gap-2">
@@ -97,7 +101,7 @@
 	</main>
 
 	<footer class="border-t border-white/10">
-		<div class="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-3">
+		<div class="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-4">
 			<div class="space-y-2">
 				<p class="text-lg font-semibold tracking-tight">City Drive</p>
 				<p class="text-sm text-white/70">
@@ -120,6 +124,14 @@
 				<div class="flex flex-col gap-3 ">
 					<BtnWhatsapp></BtnWhatsapp>
 					<BtnSnapchat></BtnSnapchat>
+				</div>
+			</div>
+
+			<div class="space-y-2">
+				<p>Nous sommes aussi sur</p>
+				<div class="flex flex-col gap-3">
+					<BtnTiktok/>
+					<BtnInstagram></BtnInstagram>
 				</div>
 			</div>
 		</div>

@@ -100,6 +100,15 @@
                         <p class="text-xs text-zinc-500">Couleur</p>
                         <p class="mt-1 font-medium text-zinc-200">{car.color}</p>
                     </div>
+                    <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                        <p class="text-xs text-zinc-500 ">Prix Semaine :</p>
+                        <p class="mt-1 font-medium text-zinc-200 text-xl">{car.pricePerWeek}€</p>
+                    </div>
+                    <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4 ">
+                        <p class="text-xs text-zinc-500">Prix Week end 72h</p>
+                        <p class="mt-1 font-medium text-zinc-200 text-xl">{car.priceWk}€</p>
+
+                    </div>
                 </div>
                 <div class="mt-6 rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
                     <p class="text-sm italic text-zinc-400">Pour toute demande personnalisée, n’hésitez pas à nous contacter.</p>

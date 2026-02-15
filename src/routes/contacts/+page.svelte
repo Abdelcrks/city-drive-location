@@ -1,5 +1,4 @@
 <section class="mx-auto max-w-6xl px-4 py-12">
-    <!-- Header -->
     <div class="mb-10">
       <p class="text-sm text-zinc-400">City Drive Location • Île-de-France</p>
       <h1 class="mt-2 text-4xl font-bold tracking-tight text-zinc-100">Contact & Devis</h1>
@@ -10,7 +9,6 @@
     </div>
   
     <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
-      <!-- VISUEL -->
       <div class="space-y-4">
         <div class="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-950 shadow-[0_20px_80px_-40px_rgba(0,0,0,0.85)]">
           <img
